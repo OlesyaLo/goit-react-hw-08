@@ -1,0 +1,20 @@
+.navigationItem {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  text-align: right;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    gap: 0px;
+  }
+}
+
+.navigationItem a {
+  text-decoration: none;
+  color: white;
+}
+
+.navigationItem a:hover {
+  color: blanchedalmond;
+}

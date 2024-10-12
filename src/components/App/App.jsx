@@ -1,35 +1,68 @@
-import ContactForm from "../ContactForm/ContactForm.jsx";
-import SearchBox from "../SearchBox/SearchBox.jsx";
-import ContactList from "../ContactList/ContactList.jsx";
-import { useDispatch } from 'react-redux';
-import { useSelector } from 'react-redux';
-import { useEffect } from 'react';
-import { fetchContacts } from "../../redux/contactsOps.js";
-import { selecIstLoading, selecIstError } from "../../redux/contactsSlice.js";
+import { Route, Routes } from 'react-router-dom';
+import Layout from '../Layout/Layout.jsx';
+import { useDispatch, useSelector } from 'react-redux';
+import { refreshUser } from '../../redux/auth/operations.js';
+import { lazy, Suspense, useEffect } from 'react';
+import PrivateRoute from '../PrivateRoute.jsx';
+import RestrictedRoute from '../RestrictedRoute.jsx';
+import { selectIsRefreshing } from '../../redux/auth/selectors.js';
+// import ErrorMessage from "../ErrorMessage/ErrorMessage.jsx";
 import Loader from "../Loader/Loader.jsx";
-import ErrorMessage from "../ErrorMessage/ErrorMessage.jsx";
+import "./App.module.css";
 
-import css from "./App.module.css";
 
-function App() {
+const HomePage = lazy(() => import('../../pages/HomePage/HomePage.jsx'));
+const LoginPage = lazy(() => import('../../pages/LoginPage/LoginPage'));
+const RegistrationPage = lazy(() =>
+  import('../../pages/RegistrationPage/RegistrationPage')
+);
+const ContactsPage = lazy(() => import('../../pages/ContactsPage/ContactsPage'));
+const NotFoundPage = lazy(() => import('../../pages/NotFoundPage/NotFoundPage'));
+
+
+export default function App() {
   const dispatch = useDispatch();
-  const isLoading = useSelector(selecIstLoading);
-  const isError = useSelector(selecIstError);
+  const isRefreshing = useSelector(selectIsRefreshing);
 
   useEffect(() => {
-    dispatch(fetchContacts());
+    dispatch(refreshUser());
   }, [dispatch]);
 
-  return (
-    <div className={css.container}>
-      <h1>Phonebook</h1>
-      <ContactForm />
-      <SearchBox />
-      <ContactList />
-      {isLoading && <Loader />}
-      {isError && <ErrorMessage />}
-    </div>
-  );
-}
+  return isRefreshing ? (
+  <Loader />
+) : (
+  <Suspense>
+  <Routes>
+    <Route path="/" element={<Layout />}>
+      <Route index element={<HomePage />} />
+       <Route
+            path="/contacts"
+            element={
+              <PrivateRoute>
+                <ContactsPage />
+              </PrivateRoute>
+            }
+          />
+        </Route>
 
-export default App;
+    <Route
+      path="/login"
+      element={
+        <RestrictedRoute>
+          <LoginPage />
+        </RestrictedRoute>
+      }
+    />
+    <Route
+      path="/register"
+      element={
+        <RestrictedRoute>
+          <RegistrationPage />
+        </RestrictedRoute>
+      }
+    />
+    <Route path="*" element={<NotFoundPage />} />
+  </Routes>
+</Suspense>
+);
+};
