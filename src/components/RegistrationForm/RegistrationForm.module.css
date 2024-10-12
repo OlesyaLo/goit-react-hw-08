@@ -30,7 +30,7 @@
   padding: 8px 16px;
   /* background-color: lightslategray;
   color: #ffff; */
-  background-color: #ff0081;
+  background-color: #fd0c64;
   color: #fff;
   border: none;
   border-radius: 8px;
@@ -39,7 +39,7 @@
 }
 
 .btnRegisterIn:hover {
-  background-color: #ca0065;
+  background-color: #b40a48;
 }
 .btnRegisterIn:focus {
   outline: 0;
@@ -47,7 +47,7 @@
 
 .btnRegisterIn:active{
   transform: scale(0.9);
-  background-color: darken(#ff0081, 20%);
+  background-color: darken(#fd0c64, 20%);
   box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
 }
 

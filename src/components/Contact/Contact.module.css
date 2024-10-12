@@ -20,8 +20,8 @@
   align-items: flex-end;
   position: absolute;
   top: 50%;
-  transform: translate(400%, -50%);
-  background-color: #ff0081;
+  transform: translate(360%, -50%);
+  background-color: #fd0c64;
   color: #fff;
  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
   box-shadow: 0 2px 15px rgba(255, 0, 130, 0.5);
@@ -31,7 +31,7 @@
 }
 
 .deleteBtn:hover {
-  background-color: #ca0065;
+  background-color: #fd0c64;
 }
 
 .deleteBtn:focus {

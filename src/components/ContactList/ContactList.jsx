@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import { fetchContacts } from "../../redux/contacts/operations.js";
 import { selecIstLoading, selecIstError } from "../../redux/contacts/selectors.js";
 import { selectVisibleContacts } from '../../redux/contacts/selectors.js';
-// import { selectToken } from '../../redux/auth/selectors';
+import { selectToken } from '../../redux/auth/selectors';
 
 import css from './ContactList.module.css';
 
@@ -14,16 +14,16 @@ export default function ContactList() {
   const filteredContacts = useSelector(selectVisibleContacts);
   const isLoading = useSelector(selecIstLoading);
   const isError = useSelector(selecIstError);
-  // const token = useSelector(selectToken);
+  const token = useSelector(selectToken);
 
-
-  // useEffect(() => {
-  //   dispatch(fetchContacts(token));
-  // }, [dispatch, token]);
 
   useEffect(() => {
-    dispatch(fetchContacts());
-  }, [dispatch]);
+    dispatch(fetchContacts(token));
+  }, [dispatch, token]);
+
+  // useEffect(() => {
+  //   dispatch(fetchContacts());
+  // }, [dispatch]);
  
   return (
     <>

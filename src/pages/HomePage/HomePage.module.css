@@ -1,19 +1,37 @@
 .homeContainer {
-  width: 1080px;
-  height: 700px;
+  
+  max-width: 1280px;
+  min-width: 600px;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+  gap: 20px;
 }
 
 .homeHeader {
-width: 300px;
+/* width: 300px; */
  font-weight: bold;
-  font-weight: 400;
+margin-bottom: 20px;
+color: #fd0c64;
+font-size: 600;
+}
+
+.homeHeaderSpan {
+ font-weight: normal;
+ color: #213547;
+ font-size: 400;
 }
 
 .homeText {
-width: 300px;
- font-weight: 400;
+/* width: 300px; */
+ font-weight: bold;
+ font-size: 20px;
+
+}
+
+.homeImg {
+  width: 500px;
+  height: 500px;
 }

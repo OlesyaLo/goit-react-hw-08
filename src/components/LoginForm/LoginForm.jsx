@@ -58,7 +58,7 @@ export default function LoginForm () {
             Log in
             </button>
           <p className={css.text}> 
-           Don't have an account? 
+           Don´t have an account? 
             <span className={css.redirect}>
               <Link to="/register">Sign up</Link>
             </span>
