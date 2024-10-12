@@ -13,10 +13,15 @@
 .homeHeader {
 /* width: 300px; */
  font-weight: bold;
-margin-bottom: 20px;
+margin-bottom: 30px;
 color: #fd0c64;
 font-size: 600;
 }
+
+.homeHeaderSpanColor {
+  color: #ffc300;
+}
+
 
 .homeHeaderSpan {
  font-weight: normal;

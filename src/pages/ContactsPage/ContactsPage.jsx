@@ -6,7 +6,7 @@ import css from './ContactsPage.module.css';
 export default function ContactsPage () {
   return (
     <div className={css.pageContainer}>
-      <h1 className={css.pageTitle}>SmartPhonebook</h1>
+      <h1 className={css.pageTitle}>Smart<span className={css.conactPageTitleSpanColor}>Phonebook</span></h1>
       <ContactForm />
       <SearchBox />
       <ContactList />
