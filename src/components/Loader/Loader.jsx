@@ -5,7 +5,7 @@ export default function Loader() {
   return (
     <div className={css.loader}>
       <b className={css.loaderText}>Loading...</b>
-      <MagnifyingGlass visible={true} height="90" width="90" ariaLabel="magnifying-glass-loading" wrapperStyle={{}} wrapperClass="magnifying-glass-wrapper" glassColor="#ebe9e1" color="#ca0065" />
+      <MagnifyingGlass visible={true} height="90" width="90" ariaLabel="magnifying-glass-loading" wrapperStyle={{}} wrapperClass="magnifying-glass-wrapper" glassColor="#ebe9e1" color="#ab0839f0" />
     </div>
   );
 }

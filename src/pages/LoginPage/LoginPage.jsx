@@ -14,8 +14,7 @@ export default function LoginPage () {
 
   return (
     <div className={css.logInPagecontainer}>
-      <h2 className={css.logInPageHeader}>Log In Here</h2>
-      <LoginForm />
+       <LoginForm />
     </div>
   );
 };

@@ -6,10 +6,10 @@ export default function Navigation () {
   return (
     <>
       <ul className={css.navigation}>
-        <li>
-          <Link to="/">Smart Phonebook</Link>
+        <li className={css.navItem}>
+          <Link to="/">SmartPhonebook</Link>
         </li>
-        <li>
+        <li className={css.navItem}>
           <Link to="/contacts">Contacts</Link>
         </li>
       </ul>

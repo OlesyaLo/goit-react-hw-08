@@ -8,12 +8,17 @@
     gap: 0px;
   }
 }
-.link {
-  color: white;
-  /* font-weight: 700; */
-  text-decoration: none;
-}
 
-.active {
-  color: black;
-}
+
+
+.navItem {
+    color: #fafafa;
+    font-weight: bold;
+    
+  text-decoration: none;
+    }
+    
+.navItem:hover {
+      color: #ffc300;
+    }
+   

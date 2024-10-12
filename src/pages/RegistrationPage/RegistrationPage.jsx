@@ -13,7 +13,7 @@ const RegistrationPage = () => {
 
   return (
     <div className={css.regContainer}>
-      <h2 className={css.regHeader}>Registration</h2>
+      
       <RegistrationForm />
     </div>
   );

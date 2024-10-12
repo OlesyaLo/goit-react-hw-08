@@ -1,5 +1,5 @@
 .containerContact {
-  border: 2px solid #707070;
+  border: 2px solid #ffc300;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 10px;
@@ -21,7 +21,7 @@
   position: absolute;
   top: 50%;
   transform: translate(360%, -50%);
-  background-color: #fd0c64;
+  background-color: #ee285b;
   color: #fff;
  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
   box-shadow: 0 2px 15px rgba(255, 0, 130, 0.5);
@@ -31,7 +31,7 @@
 }
 
 .deleteBtn:hover {
-  background-color: #fd0c64;
+  background-color: #ab0839f0;
 }
 
 .deleteBtn:focus {
@@ -41,7 +41,7 @@
 .deleteBtn:active{
   /* transform: translate(400%, -50%); */
   transition: transform scale(0.9);
-  background-color: darken(#ff0081, 20%);
+  background-color: darken(#ee285b, 20%);
   box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
 }
 

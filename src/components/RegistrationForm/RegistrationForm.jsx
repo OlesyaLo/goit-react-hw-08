@@ -52,6 +52,7 @@ const RegistrationForm = () => {
         onSubmit={handleSubmit}
       >
         <Form className={css.form}>
+        <h1 className={css.regHeader}>Sign-in Information</h1>
           <Field
             className={css.input}
             name="name"

@@ -41,6 +41,8 @@ export default function LoginForm () {
         onSubmit={handleSubmit}
       >
         <Form className={css.form}>
+        <h1 className={css.logInFormHeader}>Login</h1>
+        <p className={css.logInFormText}>If you have an account, sign in with your email address.</p>
           <Field
             className={css.input}
             name="email"
@@ -55,12 +57,12 @@ export default function LoginForm () {
           <button 
           type="submit"
           className={css.btnLogIn}>
-            Log in
+            Sign In
             </button>
           <p className={css.text}> 
            Don´t have an account? 
             <span className={css.redirect}>
-              <Link to="/register">Sign up</Link>
+              <Link to="/register">Create an Account</Link>
             </span>
           </p>
         </Form>

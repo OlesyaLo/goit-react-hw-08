@@ -1,57 +1,33 @@
 .userMenu {
   display: flex;
-  /* & p {
-    position: fixed;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
 
-    @media screen and (max-width: 768px) {
-      top: 38px;
-      text-align: center;
-    }
-
-    @media screen and (max-width: 480px) {
-      top: 20px;
-    }
-  } */
-  /* & button {
-    padding: 8px 16px;
-    background-color: lightslategray;
-    color: #ffff;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-  } */
 }
 
 .userName {
-  position: fixed;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-
-    @media screen and (max-width: 768px) {
-      top: 38px;
-      text-align: center;
-    }
-
-    @media screen and (max-width: 480px) {
-      top: 20px;
-    }
+  
+  align-items: center;
+  
+    font-weight: 500;
+  text-decoration: none;
+  margin-right: 20px;
+  color: #ffc300;
 }
 
 .logoutBtn {
-  padding: 8px 16px;
-  background-color: #ff0081;
+  padding: 5px 10px;
+  background-color: #ee285b;
   color: #fff;
+  font-size: 20px;
+  display: block;
+  align-items: center;
+  align-items: flex-end;
   border: none;
   border-radius: 8px;
   transition: transform ease-in 0.1s 
 }
 
 .logoutBtn:hover {
-  background-color: #ca0065;
+  background-color: #ab0839f0;
 }
 .logoutBtn:focus {
   outline: 0;

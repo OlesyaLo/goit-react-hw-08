@@ -1,5 +1,4 @@
 .homeContainer {
-  
   max-width: 1280px;
   min-width: 600px;
   height: 100%;
@@ -14,7 +13,7 @@
 /* width: 300px; */
  font-weight: bold;
 margin-bottom: 30px;
-color: #fd0c64;
+color: #ee285b;
 font-size: 600;
 }
 
@@ -26,14 +25,13 @@ font-size: 600;
 .homeHeaderSpan {
  font-weight: normal;
  color: #213547;
- font-size: 400;
+ /* font-size: 0.9em; */
 }
 
 .homeText {
 /* width: 300px; */
  font-weight: bold;
  font-size: 20px;
-
 }
 
 .homeImg {

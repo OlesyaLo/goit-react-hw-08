@@ -17,10 +17,10 @@ export default function Header() {
       <h3>{user.name}</h3>
       <ul className={css.nav}>
         <li>
-          <NavLink to="/">Smart Phonebook</NavLink>
+          <NavLink to="/">SmartPhonebook</NavLink>
         </li>
         <li>
-          <NavLink to="/contacts">My Contacts</NavLink>
+          <NavLink to="/contacts">Contacts</NavLink>
         </li>
         {!isLoggedIn && (
           <>
