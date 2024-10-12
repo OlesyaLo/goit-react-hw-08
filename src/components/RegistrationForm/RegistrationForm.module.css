@@ -1,0 +1,84 @@
+.formContainer {
+  width: 300px;
+  padding: 10px;
+  margin: 12px auto;
+  /* border: 1px solid #000;
+  padding: 10px;
+  border-radius: 8px; */
+  border: 2px solid #707070;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  /* & button {
+    padding: 8px 16px;
+    background-color: lightslategray;
+    color: #ffff;
+    border: none;
+    border-radius: 8px;
+  } */
+}
+
+.btnRegisterIn {
+  padding: 8px 16px;
+  /* background-color: lightslategray;
+  color: #ffff; */
+  background-color: #ff0081;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+  box-shadow: 0 2px 15px rgba(255, 0, 130, 0.5);
+}
+
+.btnRegisterIn:hover {
+  background-color: #ca0065;
+}
+.btnRegisterIn:focus {
+  outline: 0;
+}
+
+.btnRegisterIn:active{
+  transform: scale(0.9);
+  background-color: darken(#ff0081, 20%);
+  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+}
+
+.label {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  /* & span {
+    font-weight: bold;
+    padding-left: 12px;
+  } */
+}
+
+.redirect {
+  font-weight: bold;
+    padding-left: 12px;
+}
+
+.input {
+  width: 286px;
+  padding: 5px;
+  border-radius: 8px;
+}
+
+.error {
+  color: red;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* gap: 2px; */
+}

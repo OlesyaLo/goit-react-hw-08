@@ -16,8 +16,7 @@
 
 .error {
   text-align: center;
-  font-weight: bold;
-  font-size: 12px;
   color: #ca0065;
+  font-size: 12px;
   margin-top: -20px;
 }

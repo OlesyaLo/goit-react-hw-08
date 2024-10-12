@@ -1,0 +1,18 @@
+.notFoundContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.notFoundImage {
+  width: 300px;
+  height: 300px;
+}
+
+.notFoundPageText {
+  margin-top: 30px;
+  font-size: 40px;
+}

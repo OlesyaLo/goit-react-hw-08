@@ -3,7 +3,7 @@ import Layout from '../Layout/Layout.jsx';
 import { useDispatch, useSelector } from 'react-redux';
 import { refreshUser } from '../../redux/auth/operations.js';
 import { lazy, Suspense, useEffect } from 'react';
-import PrivateRoute from '../PrivateRoute.jsx';
+import PrivateRoute from "../PrivateRoute.jsx";
 import RestrictedRoute from '../RestrictedRoute.jsx';
 import { selectIsRefreshing } from '../../redux/auth/selectors.js';
 // import ErrorMessage from "../ErrorMessage/ErrorMessage.jsx";

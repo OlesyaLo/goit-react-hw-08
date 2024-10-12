@@ -1,12 +1,12 @@
 import ContactForm from '../../components/ContactForm/ContactForm';
 import ContactList from '../../components/ContactList/ContactList';
 import SearchBox from '../../components/SearchBox/SearchBox';
-import s from './ContactsPage.module.css';
+import css from './ContactsPage.module.css';
 
-const PhoneBook = () => {
+export default function ContactsPage () {
   return (
-    <div className={s.wrapper}>
-      <h1 className={s.title}>Phonebook</h1>
+    <div className={css.pageContainer}>
+      {/* <h1 className={css.pageTitle}>Phonebook</h1> */}
       <ContactForm />
       <SearchBox />
       <ContactList />
@@ -14,4 +14,4 @@ const PhoneBook = () => {
   );
 };
 
-export default PhoneBook;
+

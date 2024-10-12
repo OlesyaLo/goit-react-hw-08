@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
-axios.defaults.baseURL = 'https://connections-api.goit.global/';
+axios.defaults.baseURL = "https://connections-api.goit.global/";
 
 const setAuthToken = (token) => {
   axios.defaults.headers.common.Authorization = `Bearer ${token}`;
@@ -46,20 +46,42 @@ export const logOut = createAsyncThunk('auth/logout', async (_, thunkApi) => {
   }
 });
 
+// export const refreshUser = createAsyncThunk(
+//   'auth/refresh',
+//   async (_, thunkAPI) => {
+//     const savedToken = thunkAPI.getState().auth.token;
+//     if (savedToken === null) {
+//       return thunkAPI.rejectWithValue('Token is not exist!');
+//     }
+//     console.log(savedToken);
+//     try {
+//       setAuthToken(savedToken);
+//       const { data } = await axios.post('users/current');
+//       return data;
+//     } catch (error) {
+//       return thunkAPI.rejectWithValue(error.message);
+//     }
+//   }
+// );
+
 export const refreshUser = createAsyncThunk(
-  'auth/refresh',
-  async (_, thunkAPI) => {
-    const savedToken = thunkAPI.getState().auth.token;
-    if (savedToken === null) {
-      return thunkAPI.rejectWithValue('Token is not exist!');
-    }
-    console.log(savedToken);
+  "auth/refresh",
+  async (_, thunkApi) => {
+    const reduxState = thunkApi.getState();
+    console.log(reduxState);
+    setAuthToken(reduxState.auth.token);
+
     try {
-      setAuthToken(savedToken);
-      const { data } = await axios.post('users/current');
+      const { data } = await axios.get("/users/current");
       return data;
     } catch (error) {
-      return thunkAPI.rejectWithValue(error.message);
+      return thunkApi.rejectWithValue(error.message);
     }
+  },
+  {
+    condition: (_, thunkApi) => {
+      const reduxState = thunkApi.getState();
+      return reduxState.auth.token !== null;
+    },
   }
 );

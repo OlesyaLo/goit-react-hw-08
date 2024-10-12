@@ -1,0 +1,19 @@
+.homeContainer {
+  width: 1080px;
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.homeHeader {
+width: 300px;
+ font-weight: bold;
+  font-weight: 400;
+}
+
+.homeText {
+width: 300px;
+ font-weight: 400;
+}

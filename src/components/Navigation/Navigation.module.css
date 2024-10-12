@@ -1,15 +1,19 @@
 .navigation {
   display: flex;
   gap: 20px;
-  align-items: center;
-}
+  list-style: none;
 
-.navigation a {
-  text-decoration: none;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    gap: 0px;
+  }
+}
+.link {
   color: white;
-  font-size: 30px;
+  font-weight: 700;
+  text-decoration: none;
 }
 
-.navigation a:hover {
-  color: blanchedalmond;
+.active {
+  color: black;
 }
